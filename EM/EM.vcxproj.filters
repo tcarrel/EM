@@ -23,17 +23,43 @@
     <Image Include="Assets\SplashScreen.png">
       <Filter>Assets</Filter>
     </Image>
+    <Filter Include="Windowing">
+      <UniqueIdentifier>{5e4f4a55-e200-4fcf-913a-b373523a8aef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{3e0e215a-a90c-430d-8af1-37743f08bb36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{7b0fc3ae-1b4e-49a7-9de1-a15e1645fc2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="App.cpp">
+      <Filter>Windowing</Filter>
+    </ClCompile>
+    <ClCompile Include="App_source.cpp">
+      <Filter>Windowing</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="App.cpp" />
-    <ClCompile Include="App_source.cpp" />
+    <ClCompile Include="Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="App.h" />
-    <ClInclude Include="App_source.h" />
+    <ClInclude Include="App.h">
+      <Filter>Windowing</Filter>
+    </ClInclude>
+    <ClInclude Include="App_source.h">
+      <Filter>Windowing</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -43,5 +69,13 @@
     <None Include="Assets\SplashScreen.xcf">
       <Filter>Assets</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VertexShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="PixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

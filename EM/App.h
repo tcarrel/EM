@@ -1,6 +1,7 @@
-#ifndef my_APP_H
-#define my_APP_H
+#ifndef _APP_H
+#define _APP_H
 
+#include"Game.h"
 // Use common namespaces
 using namespace Windows::ApplicationModel;
 using namespace Windows::ApplicationModel::Core;
@@ -15,6 +16,7 @@ using namespace Platform;
 ref class App sealed : public IFrameworkView
 {
   bool window_closed_;
+  CGame game_;
 
 public:
   // Functions called by Windows

@@ -37,6 +37,8 @@ void App::Load(String^ EntryPoint)
 
 void App::Run( void ) 
 {
+  game_.initialize();
+
   // Get window ptr.
   CoreWindow^ Window = CoreWindow::GetForCurrentThread();
 
@@ -45,10 +47,9 @@ void App::Run( void )
   {
     Window->Dispatcher->ProcessEvents(CoreProcessEventsOption::ProcessAllIfPresent);
 
-    // Game code goes here.
-    // .
-    // .
-    // .
+   //Run the game
+    game_.update();
+    game_.render();
   }
 }
 
