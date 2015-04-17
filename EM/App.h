@@ -2,6 +2,9 @@
 #define _APP_H
 
 #include"Game.h"
+
+#include"pch.h"
+
 // Use common namespaces
 using namespace Windows::ApplicationModel;
 using namespace Windows::ApplicationModel::Core;
@@ -38,5 +41,4 @@ public:
   void closed(CoreWindow^, CoreWindowEventArgs^);
 
 };
-
 #endif

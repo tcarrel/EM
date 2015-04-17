@@ -13,9 +13,10 @@
 #include<agile.h>
 #include<concrt.h>
 
-// Std lib headers
-#include<cstdio>
-
-// Local headers
 #include"App.h"
 #include"App_source.h"
+#include"Game.h"
+#include"Random.h"
+#include"Particle.h"
+#include"Particle_pool.h"
+#include"Vertex.h"

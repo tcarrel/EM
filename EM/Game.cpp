@@ -137,6 +137,8 @@ void CGame::init_pipeline(void)
   // Create input layout.
   dev_->CreateInputLayout(ied, ARRAYSIZE(ied), vs_file->Data, vs_file->Length, &input_layout_);
   devcon_->IASetInputLayout(input_layout_.Get());
+
+  particles.initialize();
 }
 
 // Performs state updates
@@ -167,4 +169,9 @@ void CGame::render(void)
 
   // Swap the buffers.
   swapchain_->Present(1, 0);
+}
+
+void CGame::particle_burst(float x_origin, float y_origin, int qty)
+{
+  particles.create(x_origin, y_origin, qty);
 }

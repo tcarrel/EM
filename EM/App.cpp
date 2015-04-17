@@ -1,4 +1,6 @@
-#include "pch.h"
+#include"pch.h"
+
+#include"App.h"
 
 void make_dialog(String^, String^);
 
@@ -64,8 +66,12 @@ void App::On_activated(CoreApplicationView^ core_app_view, IActivatedEventArgs^ 
 
 void App::pointer_pressed(CoreWindow^ window, PointerEventArgs^ args)
 {
-  MessageDialog dialog("Thank you for noticing this notice.", "Notice!");
-  dialog.ShowAsync();
+  Random qty(1.0f, 1000.0f);
+
+  float x = args->CurrentPoint->Position.X;
+  float y = args->CurrentPoint->Position.Y;
+
+  game_.particle_burst(x, y, (int)qty());
 }
 void App::key_down(CoreWindow^ window, KeyEventArgs^ args)
 {

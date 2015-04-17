@@ -1,4 +1,6 @@
-#include "pch.h"
+#include"pch.h"
+
+#include"App_source.h"
 
 IFrameworkView^ App_source::CreateView(void)
 {

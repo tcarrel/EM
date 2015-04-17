@@ -1,6 +1,8 @@
 #ifndef _APP_SOURCE_H
 #define _APP_SOURCE_H
 
+#include"App.h"
+
 // Use common namespaces
 using namespace Windows::ApplicationModel;
 using namespace Windows::ApplicationModel::Core;
